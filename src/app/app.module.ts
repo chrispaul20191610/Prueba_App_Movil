@@ -10,12 +10,13 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ChatComponent } from './components/chat/chat.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, ChatComponent],
+  entryComponents: [ChatComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule, AngularFirestoreModule],

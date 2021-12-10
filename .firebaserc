@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pruebachatcpla": {
+      "hosting": {
+        "app": [
+          "pruebachatcpla"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pruebachatcpla"
+  }
+}

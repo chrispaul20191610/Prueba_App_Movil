@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
 
   onSubmitLogin(){
     this.authService.login(this.email, this.password).then(user=>{
-      this.router.navigate(['/login']);
+      this.router.navigate(['/home']);
     }).catch(err=>alert('datos de usuario incorrectps'));
   }
 

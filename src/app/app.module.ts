@@ -12,12 +12,16 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ChatComponent } from './components/chat/chat.component';
 
+import { FormsModule } from "@angular/forms";
+
+
+
 
 
 @NgModule({
   declarations: [AppComponent, ChatComponent],
   entryComponents: [ChatComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  imports: [FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule, AngularFirestoreModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

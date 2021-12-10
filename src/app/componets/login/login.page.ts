@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { Router} from '@angular/router';
+import { AlertController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,10 +18,13 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+
   onSubmitLogin(){
     this.authService.login(this.email, this.password).then(user=>{
       this.router.navigate(['/home']);
+      console.log(user);
     }).catch(err=>alert('datos de usuario incorrectps'));
   }
+
 
 }
